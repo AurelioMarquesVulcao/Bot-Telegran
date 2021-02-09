@@ -1,0 +1,32 @@
+{
+  "name": "impacta_bot",
+  "version": "1.0.0",
+  "description": "Bot Universal",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://172.16.16.12/amarques/impacta_bot.git"
+  },
+  "keywords": [
+    "Bot",
+    "de",
+    "trabalho"
+  ],
+  "author": "Aurelio Vulcão",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "diskstats": "^0.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11",
+    "os": "^0.1.1",
+    "os-utils": "0.0.14",
+    "pm2": "^4.5.0",
+    "shelljs": "^0.8.4"
+  }
+}
