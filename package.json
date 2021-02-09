@@ -12,9 +12,13 @@
   },
   "keywords": [
     "Bot",
-    "de",
     "trabalho"
   ],
   "author": "Aurelio Vulcão",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "await-sleep": "0.0.1",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0"
+  }
 }
