@@ -1,5 +1,6 @@
 const axios = require("axios");
 const { enums } = require("../config/enums");
+const { Robo } = require("./Robo");
 
 class ImpactaBot {
   constructor() {
@@ -7,14 +8,16 @@ class ImpactaBot {
     this.key = enums.Telegram.key;
     this.baseUrl = enums.Telegram.baseUrl;
   }
+  /**
+   * Metodo de busca de mensagens na API do Telegram.
+   */
   async getMessages() {
     const url = `${this.baseUrl}/bot${this.key}/getUpdates`;
-    let getMessages = await axios({
-      url: url,
-      method: "GET",
-    });
-    // console.log(getMessages.data.result);
-    return getMessages.data.result;
+    let getMessages = await Robo.request({
+        url: url,
+        method: "GET",
+    })
+    return getMessages.result;
   }
 
   async postMessages() {}
