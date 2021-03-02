@@ -81,7 +81,7 @@ class Listening {
         // let user = x.message.from.first_name;
         let user = 'ImpactaBot';
         let chatId = x.message.chat.id;
-        let filtro = this.messages.filter((x) => x.text == text);
+        let filtro = this.messages.filter((x) => x.text.toLowerCase() == text);
         let rotaResponse;
         // Testa se a mensagem já foi respondida
         if (!idTrue) {
@@ -152,7 +152,7 @@ class Listening {
    * @param {Object} messages Mensagens do Telegram
    */
   async filterMessages(messages) {
-    console.log(messages);
+    // console.log(messages);
     return messages.filter((x) => {
       try {
         return !!x.message.text;
