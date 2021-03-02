@@ -181,7 +181,7 @@ class Listening {
       dataEnvio: new Date(),
     };
     await Robo.request({
-      url: 'http://localhost:3000/mensagensRespondidas',
+      url: 'http://localhost:3999/mensagensRespondidas',
       method: 'POST',
       data: obj,
     });
@@ -190,7 +190,7 @@ class Listening {
   // Deverá ser trocado por rota no MongoDB
   async findMessage(id) {
     let find = await Robo.request({
-      url: `http://localhost:3000/mensagensRespondidas?id=${id}`,
+      url: `http://localhost:3999/mensagensRespondidas?id=${id}`,
       method: 'GET',
     });
     if (find.length != 0) {
