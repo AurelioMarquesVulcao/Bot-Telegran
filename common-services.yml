@@ -1,0 +1,12 @@
+version: "2.4"
+services:
+  base_node:
+    build: .
+    working_dir: /app
+    extra_hosts:
+      - "bigrj01mon01:10.21.0.86"
+      - "bigrj01mon02:10.21.0.139"
+      - "bigrj01mon03:10.21.0.146"
+    environment:
+      - TZ=America/Cuiaba
+

@@ -1,0 +1,35 @@
+version: "2.4"
+services:
+  impacta_bot:
+    extends:
+      file: common-services.yml
+      service: base_node
+    build:
+      context: ./
+      dockerfile: dockerfile-node
+    command: "pm2-runtime index.js"
+    # ports:
+    #   - 3304:3304
+    restart: always
+  # servicos-monitoria:
+  #   extends:
+  #     file: common-services.yml
+  #     service: base_node
+  #   build:
+  #     context: ./
+  #     dockerfile: dockerfile-node
+  #   command: "pm2-runtime src/worker/services.yml"
+  #   ports:
+  #     - ${API_PORT}:3300
+  #   restart: always
+  # front-monitoria:
+  #   extends:
+  #     file: common-services-front.yml
+  #     service: base_node
+  #   build:
+  #     context: ./
+  #     dockerfile: dockerfile-front
+  #   command: "npm run serve"
+  #   ports:
+  #     - ${FRONT_PORT}:8080
+  #   restart: always

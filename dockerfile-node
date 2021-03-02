@@ -1,0 +1,12 @@
+FROM node:12.19.0
+WORKDIR /app
+COPY ./app ./
+
+RUN npm install
+RUN npm install && npm install -g pm2 nodemon
+RUN npm install -g json-server
+
+RUN sed -i 's/DEFAULT\@SECLEVEL\=2/DEFAULT\@SECLEVEL\=1/' /etc/ssl/openssl.cnf
+
+CMD ["json-server", "--watch", "db.json"]
+CMD ["node", "server"]

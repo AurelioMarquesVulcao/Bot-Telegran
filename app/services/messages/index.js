@@ -1,7 +1,7 @@
-const sleep = require("await-sleep");
-const { ImpactaBot } = require("../../lib/server");
-const { Post } = require("../post");
-const { Robo } = require("../../lib/Robo");
+const sleep = require('await-sleep');
+const { ImpactaBot } = require('../../lib/server');
+const { Post } = require('../post');
+const { Robo } = require('../../lib/Robo');
 
 class Listening {
   constructor() {
@@ -11,17 +11,21 @@ class Listening {
     this.user = [];
     this.update_id;
     this.mensagemRespondida = [];
-    this.variaveisUpdate().then((x) => console.log("capturei"));
+    this.variaveisUpdate().then((x) => console.log('capturei'));
   }
   async getVariaveis() {
     let x = await Robo.request({
-      url: "http://172.16.16.38:3338/variaveisAmbiente",
-      data: { aplicacao: "ImpactaBot" },
-      method: "GET",
+      url: 'http://172.16.16.38:3338/variaveisAmbiente',
+      data: { aplicacao: 'ImpactaBot' },
+      method: 'GET',
     });
-    this.update_id = x.filter((x) => /idMensagem/i.test(x.origem))[0].variaveis[0];
+    this.update_id = x.filter((x) =>
+      /idMensagem/i.test(x.origem)
+    )[0].variaveis[0];
     this.user = x.filter((x) => /UserImpactaBot/i.test(x.origem))[0].variaveis;
-    this.timeUpdate = x.filter((x) => /timeUpdate/i.test(x.origem))[0].variaveis[0];
+    this.timeUpdate = x.filter((x) =>
+      /timeUpdate/i.test(x.origem)
+    )[0].variaveis[0];
     this.messages1 = x.filter((x) => /comandosTelegram/i.test(x.origem));
     // .map(x=>x.variaveis[0])
     // .map((x) => {
@@ -49,7 +53,7 @@ class Listening {
   async variaveisUpdate() {
     while (true) {
       await this.getVariaveis();
-      await sleep(this.timeUpdate*10);
+      await sleep(this.timeUpdate * 10);
     }
   }
   /**
@@ -75,7 +79,7 @@ class Listening {
         let text = x.message.text.toLowerCase();
         let idTrue = await this.findMessage(x.update_id);
         // let user = x.message.from.first_name;
-        let user = "ImpactaBot"
+        let user = 'ImpactaBot';
         let chatId = x.message.chat.id;
         let filtro = this.messages.filter((x) => x.text == text);
         let rotaResponse;
@@ -92,21 +96,29 @@ class Listening {
                 headers: filtro[0].headers,
               });
               // envia a mensagem para o Telegram
-              await Post("telegram", {
-                mensagem: `${user}:\n${filtro[0].response}\n${JSON.stringify(rotaResponse)}`,
+              await Post('telegram', {
+                mensagem: `${user}:\n${filtro[0].response}\n${JSON.stringify(
+                  rotaResponse
+                )}`,
                 chat: chatId,
               });
               // Salva a mensagem como enviada
-              await this.saveMessages(x, `${user}: ${JSON.stringify(rotaResponse)}`);
+              await this.saveMessages(
+                x,
+                `${user}: ${JSON.stringify(rotaResponse)}`
+              );
             } else {
               // se a mensagem não possuir Rota
               // envia a mensagem para o Telegram
-              await Post("telegram", {
+              await Post('telegram', {
                 mensagem: `${user}: ${filtro[0].response}`,
                 chat: chatId,
               });
               // Salva a mensagem como enviada
-              await this.saveMessages(x, `${user}:\n${JSON.stringify(rotaResponse)}`);
+              await this.saveMessages(
+                x,
+                `${user}:\n${JSON.stringify(rotaResponse)}`
+              );
             }
           } else {
             // se eu não tiver a mensagem cadastrada
@@ -125,7 +137,9 @@ class Listening {
     let userMessages = [];
     for (let i = 0; i < this.user.length; i++) {
       // console.log(this.user[i]);
-      let validado = messages.filter((x) => new RegExp(this.user[i].id, "i").test(x.message.from.id));
+      let validado = messages.filter((x) =>
+        new RegExp(this.user[i].id, 'i').test(x.message.from.id)
+      );
       for (let ii = 0; ii < validado.length; ii++) {
         userMessages.push(validado[ii]);
       }
@@ -138,7 +152,16 @@ class Listening {
    * @param {Object} messages Mensagens do Telegram
    */
   async filterMessages(messages) {
-    return messages.filter((x) => !!x.message.text);
+    console.log(messages);
+    return messages.filter((x) => {
+      try {
+        return !!x.message.text;
+      } catch (e) {
+        // Enviar uma mensagem, informando que mensagens editadas não são consideradas
+        // return !!x.edited_message.text;
+      }
+    });
+    // return messages.filter((x) => !!x.edited_message.text);
   }
 
   /**
@@ -158,8 +181,8 @@ class Listening {
       dataEnvio: new Date(),
     };
     await Robo.request({
-      url: "http://localhost:3000/mensagensRespondidas",
-      method: "POST",
+      url: 'http://localhost:3000/mensagensRespondidas',
+      method: 'POST',
       data: obj,
     });
   }
@@ -168,7 +191,7 @@ class Listening {
   async findMessage(id) {
     let find = await Robo.request({
       url: `http://localhost:3000/mensagensRespondidas?id=${id}`,
-      method: "GET",
+      method: 'GET',
     });
     if (find.length != 0) {
       return true;
