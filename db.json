@@ -859,6 +859,32 @@
       },
       "resposta": "ImpactaBot: {\"use\":62,\"free\":36,\"memoriaFree\":\"26.34\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":21}",
       "dataEnvio": "2021-03-02T17:49:41.667Z"
+    },
+    {
+      "id": 260186783,
+      "message": {
+        "update_id": 260186783,
+        "message": {
+          "message_id": 3111,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614711103,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T18:54:58.525Z"
     }
   ]
 }

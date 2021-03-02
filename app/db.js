@@ -5,5 +5,4 @@ const sleep = require('await-sleep');
 (async () => {
   shell.exec(`json-server --watch db.json`);
   await sleep(3000);
-  new Listening().listen();
 })();
