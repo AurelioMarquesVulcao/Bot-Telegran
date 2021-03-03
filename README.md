@@ -1,21 +1,54 @@
 # Impacta_Bot
 
+### Cadastro de comandos
 
+Use a url abaixo:
+##### ***http://172.16.16.38:3305/variaveis.sistema***
 
-Install JSON Server
+```json
+[{"text":"comando a ser aceito pelo Telegram",
+"respose": "texto que será encaminhado junto a resposta de sua rota de consumo",
+"rota":"url de consumo",
+"method": "metodo da requisição, "GET", "POST", ou qualquer outro metodo.",
+"data":"data a ser encaminhado na requisição",
+"headers":"header a ser encaminhado na requisição",
+"help":"Ao digitar help ou /help o Telegram vai listar todos os comandos que tenham esse parametro"
+}]
+```
 
-npm install -g json-server
-Create a db.json file with some data
+exemplo de uso:
 
-{
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
-}
-Start JSON Server
+```json
+[
+  {
+    "text": "/cpu_38",
+    "response": "O consumo de recursos da CPU do Servidor 38 é :",
+    "rota": "http://172.16.16.38:3338/cpu",
+    "method": "GET",
+    "help": "/cpu_38 -> Informa os dados de cpu do servidor 38"
+  }
+]
+```
 
-json-server --watch db.json
+ou:
+
+```json
+[
+  {
+    "text": "/cpu_38",
+    "response": "O consumo de recursos da CPU do Servidor 38 é :",
+    "rota": "http://172.16.16.38:3338/cpu",
+    "method": "GET",
+    "help": "/cpu_38 -> Informa os dados de cpu do servidor 38"
+  },
+  {
+    "text": "!statusApiBigData",
+    "response": "healthcheck",
+    "rota": "http://172.16.16.3:8083/houseKeeping/healthcheck/",
+    "method": "GET",
+    "data": {"servico":"teste"},
+    "headers": {"chave":"123456"},
+    "help": "!statusApiBigData -> informa status"
+  }
+]
+```
