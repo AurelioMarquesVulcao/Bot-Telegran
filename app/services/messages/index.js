@@ -4,6 +4,7 @@ const shell = require('shelljs');
 const { ImpactaBot } = require('../../lib/server');
 const { Post } = require('../post');
 const { Robo } = require('../../lib/Robo');
+const awaitSleep = require('await-sleep');
 
 class Listening {
   constructor() {
@@ -21,6 +22,7 @@ class Listening {
       data: { aplicacao: 'ImpactaBot' },
       method: 'GET',
     });
+    this.objId = x.filter((x) => /idMensagem/i.test(x.origem))[0];
     this.update_id = x.filter((x) =>
       /idMensagem/i.test(x.origem)
     )[0].variaveis[0];
@@ -52,7 +54,13 @@ class Listening {
     //   method: "GET",
     // });
   }
+  /**
+   * Atualiza periodicamente todas as variavéis da aplicação.
+   */
   async variaveisUpdate() {
+    await this.getVariaveis();
+    this.lastMessage();
+    await sleep(this.timeUpdate * 10);
     while (true) {
       await this.getVariaveis();
       await sleep(this.timeUpdate * 10);
@@ -87,6 +95,22 @@ class Listening {
         let rotaResponse;
         // Testa se a mensagem já foi respondida
         if (!idTrue) {
+          // envia mensagem de ajuda ao usuario
+          if (text == 'help' || text == '/help') {
+            let message = '';
+            message = this.messages
+              .filter((x) => !!x.help)
+              .map((x) => x.help)
+              .join('\n');
+
+            // console.log(message);
+            await Post('telegram', {
+              mensagem: message,
+              chat: chatId,
+            });
+            // Salva a mensagem como enviada
+            await this.saveMessages(x, `${user}: ${message}`);
+          }
           // se eu ja tiver a mensagem cadastrada
           if (filtro.length != 0) {
             // se a mensagem possuir rota, requesito essa rota
@@ -205,6 +229,35 @@ class Listening {
       console.log(e);
       shell.exec(`pm2 restart all`);
       // process.exit();
+    }
+  }
+  /**
+   * Grava no banco de dados a ultima mensagem respondida, para que não reprocesse ela quando religar o robô
+   */
+  async lastMessage() {
+    while (true) {
+      try {
+        let find = await Robo.request({
+          url: `http://localhost:3999/mensagensRespondidas?id_gte=${this.update_id}`,
+          method: 'GET',
+        });
+        let ids = find.map((x) => x.id);
+        console.log(find);
+        console.log(Math.max(...ids));
+        console.log(this.objId);
+        this.objId.variaveis = [Math.max(...ids)];
+        console.log(this.objId);
+        await Robo.request({
+          url: `http://172.16.16.38:3338/variaveisAmbiente/m`,
+          method: 'post',
+          data: { options: 'updateOne', data: this.objId, _id: this.objId._id },
+        });
+      } catch (e) {
+        console.log(e);
+        shell.exec(`pm2 restart all`);
+      }
+      // await sleep(600000)
+      await sleep(60000);
     }
   }
 }

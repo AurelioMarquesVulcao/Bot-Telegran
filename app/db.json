@@ -859,6 +859,1183 @@
       },
       "resposta": "ImpactaBot: {\"use\":62,\"free\":36,\"memoriaFree\":\"26.34\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":21}",
       "dataEnvio": "2021-03-02T17:49:41.667Z"
+    },
+    {
+      "id": 260186783,
+      "message": {
+        "update_id": 260186783,
+        "message": {
+          "message_id": 3111,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614711103,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T18:54:58.525Z"
+    },
+    {
+      "id": 260186784,
+      "message": {
+        "update_id": 260186784,
+        "message": {
+          "message_id": 3114,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614712374,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T20:17:23.610Z"
+    },
+    {
+      "id": 260186791,
+      "message": {
+        "update_id": 260186791,
+        "message": {
+          "message_id": 3140,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614713918,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T20:17:23.641Z"
+    },
+    {
+      "id": 260186792,
+      "message": {
+        "update_id": 260186792,
+        "message": {
+          "message_id": 3142,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614714003,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T20:17:23.664Z"
+    },
+    {
+      "id": 260186786,
+      "message": {
+        "update_id": 260186786,
+        "message": {
+          "message_id": 3116,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614712399,
+          "text": "teste1"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T20:22:20.508Z"
+    },
+    {
+      "id": 260186789,
+      "message": {
+        "update_id": 260186789,
+        "message": {
+          "message_id": 3136,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614713855,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T20:22:20.551Z"
+    },
+    {
+      "id": 260186787,
+      "message": {
+        "update_id": 260186787,
+        "message": {
+          "message_id": 3117,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614712403,
+          "text": "teste2"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":67,\"free\":30,\"memoriaFree\":\"25.90\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":21}",
+      "dataEnvio": "2021-03-02T20:22:20.596Z"
+    },
+    {
+      "id": 260186785,
+      "message": {
+        "update_id": 260186785,
+        "message": {
+          "message_id": 3115,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614712393,
+          "text": "cpu-38"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":67,\"free\":30,\"memoriaFree\":\"25.90\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":21}",
+      "dataEnvio": "2021-03-02T20:22:20.656Z"
+    },
+    {
+      "id": 260186788,
+      "message": {
+        "update_id": 260186788,
+        "message": {
+          "message_id": 3123,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614712971,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-02T20:22:20.676Z"
+    },
+    {
+      "id": 260186790,
+      "message": {
+        "update_id": 260186790,
+        "message": {
+          "message_id": 3138,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614713868,
+          "text": "cpu-38"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":70,\"free\":28,\"memoriaFree\":\"25.88\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":21}",
+      "dataEnvio": "2021-03-02T20:22:24.016Z"
+    },
+    {
+      "id": 260186793,
+      "message": {
+        "update_id": 260186793,
+        "message": {
+          "message_id": 3144,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614715957,
+          "text": "!statusApiBigData"
+        }
+      },
+      "resposta": "ImpactaBot: {\"Sucesso\":true}",
+      "dataEnvio": "2021-03-02T20:25:24.318Z"
+    },
+    {
+      "id": 260186794,
+      "message": {
+        "update_id": 260186794,
+        "message": {
+          "message_id": 3162,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614716852,
+          "text": "!statusApiBigData"
+        }
+      },
+      "resposta": "ImpactaBot: {\"Sucesso\":true}",
+      "dataEnvio": "2021-03-02T20:27:35.174Z"
+    },
+    {
+      "id": 260186795,
+      "message": {
+        "update_id": 260186795,
+        "message": {
+          "message_id": 3164,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614716880,
+          "text": "!statusApiBigData"
+        }
+      },
+      "resposta": "ImpactaBot: {\"Sucesso\":true}",
+      "dataEnvio": "2021-03-02T20:28:02.492Z"
+    },
+    {
+      "id": 260186796,
+      "message": {
+        "update_id": 260186796,
+        "message": {
+          "message_id": 3166,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614716887,
+          "text": "!statusApiBigData"
+        }
+      },
+      "resposta": "ImpactaBot: {\"Sucesso\":true}",
+      "dataEnvio": "2021-03-02T20:28:11.685Z"
+    },
+    {
+      "id": 260186798,
+      "message": {
+        "update_id": 260186798,
+        "message": {
+          "message_id": 3168,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614716963,
+          "text": "!statusApiBigData"
+        }
+      },
+      "resposta": "ImpactaBot: {\"Sucesso\":true}",
+      "dataEnvio": "2021-03-02T20:29:30.345Z"
+    },
+    {
+      "id": 260186804,
+      "message": {
+        "update_id": 260186804,
+        "message": {
+          "message_id": 3219,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781082,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:25:44.860Z"
+    },
+    {
+      "id": 260186800,
+      "message": {
+        "update_id": 260186800,
+        "message": {
+          "message_id": 3207,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614772987,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:25:44.884Z"
+    },
+    {
+      "id": 260186799,
+      "message": {
+        "update_id": 260186799,
+        "message": {
+          "message_id": 3206,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614772973,
+          "text": "cpu-38"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":53,\"free\":36,\"memoriaFree\":\"25.09\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-03T14:25:44.925Z"
+    },
+    {
+      "id": 260186802,
+      "message": {
+        "update_id": 260186802,
+        "message": {
+          "message_id": 3212,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614777887,
+          "text": "CPU-38"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":53,\"free\":36,\"memoriaFree\":\"25.09\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-03T14:25:44.949Z"
+    },
+    {
+      "id": 260186803,
+      "message": {
+        "update_id": 260186803,
+        "message": {
+          "message_id": 3217,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614777930,
+          "text": "CPU-38"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":53,\"free\":36,\"memoriaFree\":\"25.09\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-03T14:25:44.996Z"
+    },
+    {
+      "id": 260186801,
+      "message": {
+        "update_id": 260186801,
+        "message": {
+          "message_id": 3210,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614777531,
+          "text": "CPU-38"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":53,\"free\":36,\"memoriaFree\":\"25.09\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-03T14:25:45.021Z"
+    },
+    {
+      "id": 260186805,
+      "message": {
+        "update_id": 260186805,
+        "message": {
+          "message_id": 3227,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781720,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:28:44.634Z"
+    },
+    {
+      "id": 260186806,
+      "message": {
+        "update_id": 260186806,
+        "message": {
+          "message_id": 3229,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781725,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:28:50.803Z"
+    },
+    {
+      "id": 260186808,
+      "message": {
+        "update_id": 260186808,
+        "message": {
+          "message_id": 3234,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781731,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:28:57.120Z"
+    },
+    {
+      "id": 260186809,
+      "message": {
+        "update_id": 260186809,
+        "message": {
+          "message_id": 3236,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781735,
+          "text": "teste1"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:28:57.165Z"
+    },
+    {
+      "id": 260186810,
+      "message": {
+        "update_id": 260186810,
+        "message": {
+          "message_id": 3239,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781737,
+          "text": "teste2"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":75,\"free\":26,\"memoriaFree\":\"24.80\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-03T14:29:03.466Z"
+    },
+    {
+      "id": 260186811,
+      "message": {
+        "update_id": 260186811,
+        "message": {
+          "message_id": 3243,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781763,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:29:28.521Z"
+    },
+    {
+      "id": 260186812,
+      "message": {
+        "update_id": 260186812,
+        "message": {
+          "message_id": 3246,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781798,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:30:06.081Z"
+    },
+    {
+      "id": 260186814,
+      "message": {
+        "update_id": 260186814,
+        "message": {
+          "message_id": 3248,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781803,
+          "text": "teste1"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:30:06.116Z"
+    },
+    {
+      "id": 260186813,
+      "message": {
+        "update_id": 260186813,
+        "message": {
+          "message_id": 3247,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781800,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:30:06.158Z"
+    },
+    {
+      "id": 260186815,
+      "message": {
+        "update_id": 260186815,
+        "message": {
+          "message_id": 3252,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781806,
+          "text": "teste2"
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":34,\"free\":58,\"memoriaFree\":\"24.96\",\"memoriaTotal\":33,\"hdFree\":82,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-03T14:30:12.382Z"
+    },
+    {
+      "id": 260186819,
+      "message": {
+        "update_id": 260186819,
+        "message": {
+          "message_id": 3257,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614781823,
+          "text": "teste1"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:30:24.953Z"
+    },
+    {
+      "id": 260186821,
+      "message": {
+        "update_id": 260186821,
+        "message": {
+          "message_id": 3260,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614782555,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T14:42:41.591Z"
+    },
+    {
+      "id": 260186830,
+      "message": {
+        "update_id": 260186830,
+        "message": {
+          "message_id": 3274,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614784247,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.512Z"
+    },
+    {
+      "id": 260186825,
+      "message": {
+        "update_id": 260186825,
+        "message": {
+          "message_id": 3267,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614783763,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.544Z"
+    },
+    {
+      "id": 260186828,
+      "message": {
+        "update_id": 260186828,
+        "message": {
+          "message_id": 3270,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614783811,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.613Z"
+    },
+    {
+      "id": 260186829,
+      "message": {
+        "update_id": 260186829,
+        "message": {
+          "message_id": 3273,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614784238,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.650Z"
+    },
+    {
+      "id": 260186824,
+      "message": {
+        "update_id": 260186824,
+        "message": {
+          "message_id": 3266,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614783739,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.710Z"
+    },
+    {
+      "id": 260186823,
+      "message": {
+        "update_id": 260186823,
+        "message": {
+          "message_id": 3263,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614783065,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.747Z"
+    },
+    {
+      "id": 260186831,
+      "message": {
+        "update_id": 260186831,
+        "message": {
+          "message_id": 3275,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614784251,
+          "text": "/help",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 5,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.767Z"
+    },
+    {
+      "id": 260186822,
+      "message": {
+        "update_id": 260186822,
+        "message": {
+          "message_id": 3262,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614782988,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.815Z"
+    },
+    {
+      "id": 260186832,
+      "message": {
+        "update_id": 260186832,
+        "message": {
+          "message_id": 3276,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614784307,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:14:08.833Z"
+    },
+    {
+      "id": 260186827,
+      "message": {
+        "update_id": 260186827,
+        "message": {
+          "message_id": 3269,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614783805,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-03T15:14:56.215Z"
+    },
+    {
+      "id": 260186833,
+      "message": {
+        "update_id": 260186833,
+        "message": {
+          "message_id": 3341,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614784576,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World\ncpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:16:24.070Z"
+    },
+    {
+      "id": 260186834,
+      "message": {
+        "update_id": 260186834,
+        "message": {
+          "message_id": 3345,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614784665,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: cpu-38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-03T15:17:53.130Z"
     }
   ]
 }
