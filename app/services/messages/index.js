@@ -97,8 +97,7 @@ class Listening {
         if (!idTrue) {
           // envia mensagem de ajuda ao usuario
           if (text == 'help' || text == '/help') {
-            let message = '';
-            message = this.messages
+            let message = this.messages
               .filter((x) => !!x.help)
               .map((x) => x.help)
               .join('\n');
@@ -110,6 +109,7 @@ class Listening {
             });
             // Salva a mensagem como enviada
             await this.saveMessages(x, `${user}: ${message}`);
+            
           }
           // se eu ja tiver a mensagem cadastrada
           if (filtro.length != 0) {
