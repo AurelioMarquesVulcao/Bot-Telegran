@@ -1,5 +1,13 @@
+const shell = require('shelljs');
+
 const { Listening } = require('./services/messages');
 
 (async () => {
-  new Listening().listen();
+  try {
+    new Listening().listen();
+  } catch (e) {
+    console.log(e);
+    shell.exec(`pm2 restart all`);
+    // process.exit();
+  }
 })();

@@ -1,4 +1,6 @@
 const sleep = require('await-sleep');
+const shell = require('shelljs');
+
 const { ImpactaBot } = require('../../lib/server');
 const { Post } = require('../post');
 const { Robo } = require('../../lib/Robo');
@@ -189,14 +191,20 @@ class Listening {
 
   // Deverá ser trocado por rota no MongoDB
   async findMessage(id) {
-    let find = await Robo.request({
-      url: `http://localhost:3999/mensagensRespondidas?id=${id}`,
-      method: 'GET',
-    });
-    if (find.length != 0) {
-      return true;
-    } else {
-      return false;
+    try {
+      let find = await Robo.request({
+        url: `http://localhost:3999/mensagensRespondidas?id=${id}`,
+        method: 'GET',
+      });
+      if (find.length != 0) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      console.log(e);
+      shell.exec(`pm2 restart all`);
+      // process.exit();
     }
   }
 }
