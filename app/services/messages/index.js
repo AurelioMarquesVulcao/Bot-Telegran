@@ -121,12 +121,12 @@ class Listening {
                   headers: filtro[0].headers,
                 });
                 // envia a mensagem para o Telegram
-                await Post('telegram', {
-                  mensagem: `${user}:\n${filtro[0].response}\n${JSON.stringify(
-                    rotaResponse
-                  )}`,
-                  chat: chatId,
-                });
+                await this.postarTelegram(
+                  user,
+                  filtro[0],
+                  chatId,
+                  rotaResponse
+                );
                 // Salva a mensagem como enviada
                 await this.saveMessages(
                   x,
@@ -135,10 +135,8 @@ class Listening {
               } else {
                 // se a mensagem não possuir Rota
                 // envia a mensagem para o Telegram
-                await Post('telegram', {
-                  mensagem: `${user}: ${filtro[0].response}`,
-                  chat: chatId,
-                });
+                await this.postarTelegram(user, filtro[0], chatId);
+
                 // Salva a mensagem como enviada
                 await this.saveMessages(
                   x,
@@ -289,6 +287,27 @@ class Listening {
     }
   }
 
+  async postarTelegram(user, filtro, chatId, rotaResponse = null) {
+    if (rotaResponse == null) {
+      await Post('telegram', {
+        mensagem: `${user}:\n${filtro.response}`,
+        chat: chatId,
+      });
+    } else if (rotaResponse != null && !!filtro.response) {
+      await Post('telegram', {
+        mensagem: `${user}:\n${filtro.response}\n${JSON.stringify(
+          rotaResponse
+        )}`,
+        chat: chatId,
+      });
+    } else {
+      await Post('telegram', {
+        mensagem: `${user}:\n${JSON.stringify(rotaResponse)}`,
+        chat: chatId,
+      });
+    }
+  }
+
   async atualizaUltimaMensagem(numero) {
     console.log(numero);
     if (Number.isInteger(numero)) {
@@ -304,8 +323,8 @@ class Listening {
           _id: this.objId._id,
         },
       });
-    }else{
-      console.log("Sem mensagens novas");
+    } else {
+      console.log('Sem mensagens novas');
     }
   }
 }
