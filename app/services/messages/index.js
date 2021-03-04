@@ -68,7 +68,7 @@ class Listening {
    */
   async listen() {
     while (true) {
-      let messages = await this.bot.getMessages(this.update_id);
+      let messages = await this.bot.getMessages(this.update_id+1);
       let filterMessages = await this.filterMessages(messages);
       let mf = this.filterUser(filterMessages);
       await this.postComands(mf);
