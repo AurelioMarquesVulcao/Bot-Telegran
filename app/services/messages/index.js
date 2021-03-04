@@ -8,7 +8,7 @@ const awaitSleep = require('await-sleep');
 
 class Listening {
   constructor() {
-    this.messageHelp="";
+    this.messageHelp = '';
     this.erro = 0;
     this.timeUpdate;
     this.bot = new ImpactaBot();
@@ -33,7 +33,7 @@ class Listening {
       /timeUpdate/i.test(x.origem)
     )[0].variaveis[0];
     this.messages1 = x.filter((x) => /comandosTelegram/i.test(x.origem));
-    
+
     this.messages = [];
     for (let i = 0; i < this.messages1.length; i++) {
       if (this.messages1[i].variaveis.length == 1) {
@@ -56,7 +56,7 @@ class Listening {
    */
   async variaveisUpdate() {
     await this.getVariaveis();
-    this.lastMessage();
+    // this.lastMessage();
     await sleep(this.timeUpdate * 3);
     while (true) {
       await this.getVariaveis();
@@ -67,13 +67,15 @@ class Listening {
    * Escuta a Api do Telegram e valida o usuario. chamando a resposta em seguida
    */
   async listen() {
-    await sleep(3000);
     while (true) {
       let messages = await this.bot.getMessages(this.update_id);
-      // process.exit()
       let filterMessages = await this.filterMessages(messages);
       let mf = this.filterUser(filterMessages);
       await this.postComands(mf);
+      // console.log(messages);
+      let ids = messages.map((x) => x.update_id);
+      console.log(ids);
+      await this.atualizaUltimaMensagem(Math.max(...ids));
       console.log(new Date());
       await sleep(this.timeUpdate);
     }
@@ -237,7 +239,7 @@ class Listening {
     }
   }
   /**
-   * Grava no banco de dados a ultima mensagem respondida, para que não reprocesse ela quando religar o robô
+   * Código morto
    */
   async lastMessage() {
     while (true) {
@@ -249,11 +251,13 @@ class Listening {
         // console.log(this.update_id);
         // console.log(find);
         let ids = find.map((x) => x.id);
+        // this.objId.variaveis = [Math.max(...ids)];
         // console.log(typeof Math.max(...ids));
         // console.log(typeof -Infinity);
         console.log('Sucesso ao carregar ultima mensagem');
         if (!!find) {
           this.objId.variaveis = [Math.max(...ids)];
+
           // console.log(Math.max(...ids));
           // console.log(this.objId);
           // process.exit();
@@ -282,6 +286,26 @@ class Listening {
       }
       // await sleep(600000)
       await sleep(60000);
+    }
+  }
+
+  async atualizaUltimaMensagem(numero) {
+    console.log(numero);
+    if (Number.isInteger(numero)) {
+      console.log(this.objId);
+      this.objId.variaveis = numero;
+      console.log(this.objId);
+      await Robo.request({
+        url: `http://172.16.16.38:3338/variaveisAmbiente/m`,
+        method: 'post',
+        data: {
+          options: 'updateOne',
+          data: this.objId,
+          _id: this.objId._id,
+        },
+      });
+    }else{
+      console.log("Sem mensagens novas");
     }
   }
 }
