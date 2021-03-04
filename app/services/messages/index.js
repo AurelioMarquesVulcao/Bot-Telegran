@@ -8,6 +8,7 @@ const awaitSleep = require('await-sleep');
 
 class Listening {
   constructor() {
+    this.erro = 0;
     this.timeUpdate;
     this.bot = new ImpactaBot();
     this.messages = [];
@@ -220,6 +221,7 @@ class Listening {
 
   // Deverá ser trocado por rota no MongoDB
   async findMessage(id) {
+    
     try {
       let find = await Robo.request({
         url: `http://localhost:3999/mensagensRespondidas?id=${id}`,
@@ -231,7 +233,13 @@ class Listening {
         return false;
       }
     } catch (e) {
-      console.log(e);
+      this.erro++;
+      console.log("erro ao obter mensagem respondida pelo id");
+      // await sleep(5000);
+      // await lastMessage();
+      if (this.erro >= 5) {
+        process.exit();
+      }
       // shell.exec(`pm2 restart all`);
       // process.exit();
     }
@@ -246,19 +254,32 @@ class Listening {
           url: `http://localhost:3999/mensagensRespondidas?id_gte=${this.update_id}`,
           method: 'GET',
         });
-        let ids = find.map((x) => x.id);
+        console.log(this.update_id);
         console.log(find);
+        let ids = find.map((x) => x.id);
         console.log(Math.max(...ids));
-        console.log(this.objId);
-        this.objId.variaveis = [Math.max(...ids)];
-        console.log(this.objId);
-        await Robo.request({
-          url: `http://172.16.16.38:3338/variaveisAmbiente/m`,
-          method: 'post',
-          data: { options: 'updateOne', data: this.objId, _id: this.objId._id },
-        });
+        console.log('Sucesso ao carregar ultima mensagem');
+        if(!!find){
+          this.objId.variaveis = [Math.max(...ids)];
+          console.log(this.objId);
+          // process.exit();
+          // console.log(this.objId);
+          // console.log(this.objId);
+          await Robo.request({
+            url: `http://172.16.16.38:3338/variaveisAmbiente/m`,
+            method: 'post',
+            data: { options: 'updateOne', data: this.objId, _id: this.objId._id },
+          });
+        }
       } catch (e) {
-        console.log(e);
+        this.erro++;
+        console.log("Erro ao confirmar as ultimas mensagens");
+        if (this.erro >= 5) {
+          process.exit();
+        }
+        await sleep(3000)
+        await this.lastMessage()
+        
         // shell.exec(`pm2 restart all`);
       }
       // await sleep(600000)

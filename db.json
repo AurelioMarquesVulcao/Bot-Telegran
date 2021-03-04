@@ -3079,6 +3079,32 @@
       },
       "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
       "dataEnvio": "2021-03-04T12:36:18.556Z"
+    },
+    {
+      "id": 260186873,
+      "message": {
+        "update_id": 260186873,
+        "message": {
+          "message_id": 4014,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614862640,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:57:27.302Z"
     }
   ]
 }
