@@ -2140,6 +2140,945 @@
       },
       "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/start -> Funciona como Hello World",
       "dataEnvio": "2021-03-03T15:29:58.434Z"
+    },
+    {
+      "id": 260186820,
+      "message": {
+        "update_id": 260186820,
+        "message": {
+          "message_id": 3259,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614782482,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:08:52.903Z"
+    },
+    {
+      "id": 260186844,
+      "message": {
+        "update_id": 260186844,
+        "message": {
+          "message_id": 3377,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614786793,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:08:53.032Z"
+    },
+    {
+      "id": 260186853,
+      "message": {
+        "update_id": 260186853,
+        "message": {
+          "message_id": 3394,
+          "from": {
+            "id": 1558510979,
+            "is_bot": false,
+            "first_name": "Bruno",
+            "last_name": "Santos",
+            "language_code": "en"
+          },
+          "chat": {
+            "id": 1558510979,
+            "first_name": "Bruno",
+            "last_name": "Santos",
+            "type": "private"
+          },
+          "date": 1614834253,
+          "text": "/proadv",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 7,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: \"Diários pendentes de pesquisa Proadv 1\"",
+      "dataEnvio": "2021-03-04T12:08:53.108Z"
+    },
+    {
+      "id": 260186857,
+      "message": {
+        "update_id": 260186857,
+        "message": {
+          "message_id": 3398,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614834345,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:08:53.186Z"
+    },
+    {
+      "id": 260186846,
+      "message": {
+        "update_id": 260186846,
+        "message": {
+          "message_id": 3381,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614788608,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.074Z"
+    },
+    {
+      "id": 260186839,
+      "message": {
+        "update_id": 260186839,
+        "message": {
+          "message_id": 3355,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614785202,
+          "text": "/cpu_38",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 7,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":33,\"free\":71,\"memoriaFree\":\"24.29\",\"memoriaTotal\":33,\"hdFree\":81,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-04T12:09:05.204Z"
+    },
+    {
+      "id": 260186838,
+      "message": {
+        "update_id": 260186838,
+        "message": {
+          "message_id": 3353,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614785187,
+          "text": "Help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.242Z"
+    },
+    {
+      "id": 260186845,
+      "message": {
+        "update_id": 260186845,
+        "message": {
+          "message_id": 3379,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614786816,
+          "text": "teste"
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.275Z"
+    },
+    {
+      "id": 260186849,
+      "message": {
+        "update_id": 260186849,
+        "message": {
+          "message_id": 3387,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614794113,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.309Z"
+    },
+    {
+      "id": 260186862,
+      "message": {
+        "update_id": 260186862,
+        "message": {
+          "message_id": 3438,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614859391,
+          "text": "/help",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 5,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.350Z"
+    },
+    {
+      "id": 260186851,
+      "message": {
+        "update_id": 260186851,
+        "message": {
+          "message_id": 3391,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614794217,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.380Z"
+    },
+    {
+      "id": 260186847,
+      "message": {
+        "update_id": 260186847,
+        "message": {
+          "message_id": 3383,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614788621,
+          "text": "/cpu_38",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 7,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: {\"use\":33,\"free\":71,\"memoriaFree\":\"24.29\",\"memoriaTotal\":33,\"hdFree\":81,\"hdPercent\":22}",
+      "dataEnvio": "2021-03-04T12:09:05.416Z"
+    },
+    {
+      "id": 260186855,
+      "message": {
+        "update_id": 260186855,
+        "message": {
+          "message_id": 3396,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614834283,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.461Z"
+    },
+    {
+      "id": 260186848,
+      "message": {
+        "update_id": 260186848,
+        "message": {
+          "message_id": 3385,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614794065,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.496Z"
+    },
+    {
+      "id": 260186859,
+      "message": {
+        "update_id": 260186859,
+        "message": {
+          "message_id": 3406,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614858826,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.534Z"
+    },
+    {
+      "id": 260186850,
+      "message": {
+        "update_id": 260186850,
+        "message": {
+          "message_id": 3389,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614794179,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.566Z"
+    },
+    {
+      "id": 260186858,
+      "message": {
+        "update_id": 260186858,
+        "message": {
+          "message_id": 3404,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614858807,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.607Z"
+    },
+    {
+      "id": 260186854,
+      "message": {
+        "update_id": 260186854,
+        "message": {
+          "message_id": 3395,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614834262,
+          "text": "Help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.655Z"
+    },
+    {
+      "id": 260186861,
+      "message": {
+        "update_id": 260186861,
+        "message": {
+          "message_id": 3410,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614859081,
+          "text": "/help",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 5,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.703Z"
+    },
+    {
+      "id": 260186860,
+      "message": {
+        "update_id": 260186860,
+        "message": {
+          "message_id": 3408,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614858840,
+          "text": "/proadv",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 7,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: \"Diários pendentes de pesquisa Proadv 1\"",
+      "dataEnvio": "2021-03-04T12:09:05.744Z"
+    },
+    {
+      "id": 260186836,
+      "message": {
+        "update_id": 260186836,
+        "message": {
+          "message_id": 3349,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614785040,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:09:05.774Z"
+    },
+    {
+      "id": 260186835,
+      "message": {
+        "update_id": 260186835,
+        "message": {
+          "message_id": 3347,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614784976,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.796Z"
+    },
+    {
+      "id": 260186837,
+      "message": {
+        "update_id": 260186837,
+        "message": {
+          "message_id": 3351,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614785105,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:09:05.830Z"
+    },
+    {
+      "id": 260186863,
+      "message": {
+        "update_id": 260186863,
+        "message": {
+          "message_id": 3687,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614860447,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:22:54.244Z"
+    },
+    {
+      "id": 260186866,
+      "message": {
+        "update_id": 260186866,
+        "message": {
+          "message_id": 3690,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614860567,
+          "text": "/start",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 6,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot:\nundefined",
+      "dataEnvio": "2021-03-04T12:22:55.090Z"
+    },
+    {
+      "id": 260186867,
+      "message": {
+        "update_id": 260186867,
+        "message": {
+          "message_id": 3692,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614860583,
+          "text": "/help",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 5,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:23:58.221Z"
+    },
+    {
+      "id": 260186868,
+      "message": {
+        "update_id": 260186868,
+        "message": {
+          "message_id": 3694,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614860652,
+          "text": "/help",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 5,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:24:17.109Z"
+    },
+    {
+      "id": 260186869,
+      "message": {
+        "update_id": 260186869,
+        "message": {
+          "message_id": 3696,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614860663,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:24:29.795Z"
+    },
+    {
+      "id": 260186870,
+      "message": {
+        "update_id": 260186870,
+        "message": {
+          "message_id": 3698,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614861052,
+          "text": "/proadv",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 7,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: \"Diários pendentes de pesquisa Proadv 2\"",
+      "dataEnvio": "2021-03-04T12:31:03.302Z"
+    },
+    {
+      "id": 260186871,
+      "message": {
+        "update_id": 260186871,
+        "message": {
+          "message_id": 3700,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614861067,
+          "text": "/proadv",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 7,
+              "type": "bot_command"
+            }
+          ]
+        }
+      },
+      "resposta": "ImpactaBot: \"Diários pendentes de pesquisa Proadv 2\"",
+      "dataEnvio": "2021-03-04T12:31:09.689Z"
+    },
+    {
+      "id": 260186872,
+      "message": {
+        "update_id": 260186872,
+        "message": {
+          "message_id": 3702,
+          "from": {
+            "id": 610732305,
+            "is_bot": false,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "language_code": "pt-br"
+          },
+          "chat": {
+            "id": 610732305,
+            "first_name": "Aurelio",
+            "username": "Aurelio_Vulcao",
+            "type": "private"
+          },
+          "date": 1614861372,
+          "text": "help"
+        }
+      },
+      "resposta": "ImpactaBot: /cpu_38 -> Informa os dados de cpu do servidor 38\n/proadv -> Informa a quantidade de diários pendentes de notificação nos últimos 14 dias\n/start -> Funciona como Hello World",
+      "dataEnvio": "2021-03-04T12:36:18.556Z"
     }
   ]
 }

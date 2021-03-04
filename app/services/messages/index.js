@@ -84,75 +84,80 @@ class Listening {
    * @param {Object} messages mensagem do Telegram
    */
   async postComands(messages) {
-    messages.map(async (x) => {
-      if (x.update_id > this.update_id) {
-        let text = x.message.text.toLowerCase();
-        let idTrue = await this.findMessage(x.update_id);
-        // let user = x.message.from.first_name;
-        let user = 'ImpactaBot';
-        let chatId = x.message.chat.id;
-        let filtro = this.messages.filter((x) => x.text.toLowerCase() == text);
-        let rotaResponse;
-        // Testa se a mensagem já foi respondida
-        if (!idTrue) {
-          // envia mensagem de ajuda ao usuario
-          if (text == 'help' || text == '/help') {
-            let message = this.messages
-              .filter((x) => !!x.help)
-              .map((x) => x.help)
-              .join('\n');
+    try {
+      messages.map(async (x) => {
+        if (x.update_id > this.update_id) {
+          let text = x.message.text.toLowerCase().trim();
+          let idTrue = await this.findMessage(x.update_id);
+          // let user = x.message.from.first_name;
+          let user = 'ImpactaBot';
+          let chatId = x.message.chat.id;
+          let filtro = this.messages.filter(
+            (x) => x.text.toLowerCase().trim() == text
+          );
+          let rotaResponse;
+          // Testa se a mensagem já foi respondida
+          if (!idTrue) {
+            // envia mensagem de ajuda ao usuario
+            if (text == 'help' || text == '/help') {
+              let message = this.messages
+                .filter((x) => !!x.help)
+                .map((x) => x.help)
+                .join('\n');
 
-            // console.log(message);
-            await Post('telegram', {
-              mensagem: message,
-              chat: chatId,
-            });
-            // Salva a mensagem como enviada
-            await this.saveMessages(x, `${user}: ${message}`);
-            
-          }
-          // se eu ja tiver a mensagem cadastrada
-          if (filtro.length != 0) {
-            // se a mensagem possuir rota, requesito essa rota
-            if (filtro[0].rota) {
-              rotaResponse = await Robo.request({
-                url: filtro[0].rota,
-                method: filtro[0].method,
-                data: filtro[0].data,
-                headers: filtro[0].headers,
-              });
-              // envia a mensagem para o Telegram
+              // console.log(message);
               await Post('telegram', {
-                mensagem: `${user}:\n${filtro[0].response}\n${JSON.stringify(
-                  rotaResponse
-                )}`,
+                mensagem: message,
                 chat: chatId,
               });
               // Salva a mensagem como enviada
-              await this.saveMessages(
-                x,
-                `${user}: ${JSON.stringify(rotaResponse)}`
-              );
-            } else {
-              // se a mensagem não possuir Rota
-              // envia a mensagem para o Telegram
-              await Post('telegram', {
-                mensagem: `${user}: ${filtro[0].response}`,
-                chat: chatId,
-              });
-              // Salva a mensagem como enviada
-              await this.saveMessages(
-                x,
-                `${user}:\n${JSON.stringify(rotaResponse)}`
-              );
+              await this.saveMessages(x, `${user}: ${message}`);
             }
-          } else {
-            // se eu não tiver a mensagem cadastrada
-            console.log(text);
+            // se eu ja tiver a mensagem cadastrada
+            if (filtro.length != 0) {
+              // se a mensagem possuir rota, requesito essa rota
+              if (filtro[0].rota) {
+                rotaResponse = await Robo.request({
+                  url: filtro[0].rota,
+                  method: filtro[0].method,
+                  data: filtro[0].data,
+                  headers: filtro[0].headers,
+                });
+                // envia a mensagem para o Telegram
+                await Post('telegram', {
+                  mensagem: `${user}:\n${filtro[0].response}\n${JSON.stringify(
+                    rotaResponse
+                  )}`,
+                  chat: chatId,
+                });
+                // Salva a mensagem como enviada
+                await this.saveMessages(
+                  x,
+                  `${user}: ${JSON.stringify(rotaResponse)}`
+                );
+              } else {
+                // se a mensagem não possuir Rota
+                // envia a mensagem para o Telegram
+                await Post('telegram', {
+                  mensagem: `${user}: ${filtro[0].response}`,
+                  chat: chatId,
+                });
+                // Salva a mensagem como enviada
+                await this.saveMessages(
+                  x,
+                  `${user}:\n${JSON.stringify(rotaResponse)}`
+                );
+              }
+            } else {
+              // se eu não tiver a mensagem cadastrada
+              console.log(text);
+            }
           }
         }
-      }
-    });
+      });
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   /**
@@ -227,7 +232,7 @@ class Listening {
       }
     } catch (e) {
       console.log(e);
-      shell.exec(`pm2 restart all`);
+      // shell.exec(`pm2 restart all`);
       // process.exit();
     }
   }
@@ -254,7 +259,7 @@ class Listening {
         });
       } catch (e) {
         console.log(e);
-        shell.exec(`pm2 restart all`);
+        // shell.exec(`pm2 restart all`);
       }
       // await sleep(600000)
       await sleep(60000);

@@ -8,7 +8,7 @@ const { Listening } = require('./services/messages');
     // new Listening().lastMessage();
   } catch (e) {
     console.log(e);
-    shell.exec(`pm2 restart all`);
+    // shell.exec(`pm2 restart all`);
     // process.exit();
   }
 })();
