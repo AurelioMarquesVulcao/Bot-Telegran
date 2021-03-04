@@ -8,6 +8,7 @@ const awaitSleep = require('await-sleep');
 
 class Listening {
   constructor() {
+    this.messageHelp="";
     this.erro = 0;
     this.timeUpdate;
     this.bot = new ImpactaBot();
@@ -32,12 +33,8 @@ class Listening {
       /timeUpdate/i.test(x.origem)
     )[0].variaveis[0];
     this.messages1 = x.filter((x) => /comandosTelegram/i.test(x.origem));
-    // .map(x=>x.variaveis[0])
-    // .map((x) => {
-    //   for (let i = 0; i < x.variaveis.length; i++) {
-    //     return x.variaveis[i];
-    //   }
-    // });
+    
+    this.messages = [];
     for (let i = 0; i < this.messages1.length; i++) {
       if (this.messages1[i].variaveis.length == 1) {
         this.messages.push(this.messages1[i].variaveis[0]);
@@ -48,31 +45,32 @@ class Listening {
         }
       }
     }
-    // console.log("teste aqui",this.messages);
-    // this.timeUpdate = 5000;
-    // this.mensagemRespondida = await Robo.request({
-    //   url: "http://localhost:3000/mensagensRespondidas",
-    //   method: "GET",
-    // });
+    this.messageHelp = this.messages
+      .filter((x) => !!x.help)
+      .map((x) => x.help)
+      .join('\n');
   }
+
   /**
    * Atualiza periodicamente todas as variavéis da aplicação.
    */
   async variaveisUpdate() {
     await this.getVariaveis();
     this.lastMessage();
-    await sleep(this.timeUpdate * 10);
+    await sleep(this.timeUpdate * 3);
     while (true) {
       await this.getVariaveis();
-      await sleep(this.timeUpdate * 10);
+      await sleep(this.timeUpdate * 3);
     }
   }
   /**
    * Escuta a Api do Telegram e valida o usuario. chamando a resposta em seguida
    */
   async listen() {
+    await sleep(3000);
     while (true) {
-      let messages = await this.bot.getMessages();
+      let messages = await this.bot.getMessages(this.update_id);
+      // process.exit()
       let filterMessages = await this.filterMessages(messages);
       let mf = this.filterUser(filterMessages);
       await this.postComands(mf);
@@ -101,18 +99,14 @@ class Listening {
           if (!idTrue) {
             // envia mensagem de ajuda ao usuario
             if (text == 'help' || text == '/help') {
-              let message = this.messages
-                .filter((x) => !!x.help)
-                .map((x) => x.help)
-                .join('\n');
-
-              // console.log(message);
+              console.log(this.messages);
+              console.log(this.messageHelp);
               await Post('telegram', {
-                mensagem: message,
+                mensagem: this.messageHelp,
                 chat: chatId,
               });
               // Salva a mensagem como enviada
-              await this.saveMessages(x, `${user}: ${message}`);
+              await this.saveMessages(x, `${user}: ${this.messageHelp}`);
             }
             // se eu ja tiver a mensagem cadastrada
             if (filtro.length != 0) {
@@ -221,7 +215,6 @@ class Listening {
 
   // Deverá ser trocado por rota no MongoDB
   async findMessage(id) {
-    
     try {
       let find = await Robo.request({
         url: `http://localhost:3999/mensagensRespondidas?id=${id}`,
@@ -234,9 +227,8 @@ class Listening {
       }
     } catch (e) {
       this.erro++;
-      console.log("erro ao obter mensagem respondida pelo id");
-      // await sleep(5000);
-      // await lastMessage();
+      console.log('erro ao obter mensagem respondida pelo id');
+      await sleep(5000);
       if (this.erro >= 5) {
         process.exit();
       }
@@ -254,32 +246,38 @@ class Listening {
           url: `http://localhost:3999/mensagensRespondidas?id_gte=${this.update_id}`,
           method: 'GET',
         });
-        console.log(this.update_id);
-        console.log(find);
+        // console.log(this.update_id);
+        // console.log(find);
         let ids = find.map((x) => x.id);
-        console.log(Math.max(...ids));
+        // console.log(typeof Math.max(...ids));
+        // console.log(typeof -Infinity);
         console.log('Sucesso ao carregar ultima mensagem');
-        if(!!find){
+        if (!!find) {
           this.objId.variaveis = [Math.max(...ids)];
-          console.log(this.objId);
+          // console.log(Math.max(...ids));
+          // console.log(this.objId);
           // process.exit();
           // console.log(this.objId);
           // console.log(this.objId);
           await Robo.request({
             url: `http://172.16.16.38:3338/variaveisAmbiente/m`,
             method: 'post',
-            data: { options: 'updateOne', data: this.objId, _id: this.objId._id },
+            data: {
+              options: 'updateOne',
+              data: this.objId,
+              _id: this.objId._id,
+            },
           });
         }
       } catch (e) {
         this.erro++;
-        console.log("Erro ao confirmar as ultimas mensagens");
+        console.log('Erro ao confirmar as ultimas mensagens');
         if (this.erro >= 5) {
           process.exit();
         }
-        await sleep(3000)
-        await this.lastMessage()
-        
+        await sleep(3000);
+        await this.lastMessage();
+
         // shell.exec(`pm2 restart all`);
       }
       // await sleep(600000)

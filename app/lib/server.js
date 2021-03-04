@@ -11,8 +11,8 @@ class ImpactaBot {
   /**
    * Metodo de busca de mensagens na API do Telegram.
    */
-  async getMessages() {
-    const url = `${this.baseUrl}/bot${this.key}/getUpdates`;
+  async getMessages(lastId) {
+    const url = `${this.baseUrl}/bot${this.key}/getUpdates?timeout=50&offset=${lastId}`;
     let getMessages = await Robo.request({
         url: url,
         method: "GET",
