@@ -7,10 +7,9 @@ const { Listening } = require('./services/messages');
   try {
     await sleep(5000)
     new Listening().listen();
-    // new Listening().lastMessage();
   } catch (e) {
     console.log(e);
     // shell.exec(`pm2 restart all`);
-    // process.exit();
+    process.exit();
   }
 })();
