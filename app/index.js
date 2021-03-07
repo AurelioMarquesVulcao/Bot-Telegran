@@ -5,7 +5,7 @@ const { Listening } = require('./services/messages');
 
 (async () => {
   try {
-    await sleep(5000)
+    await sleep(1000)
     new Listening().listen();
   } catch (e) {
     console.log(e);

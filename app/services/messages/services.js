@@ -8,7 +8,7 @@ const awaitSleep = require('await-sleep');
 const { Telegram } = require('../post');
 const { Robo } = require('../../lib/Robo');
 
-class Listening {
+class Service {
   constructor() {
     this.messageHelp = '';
     this.erro = 0;
@@ -336,4 +336,4 @@ class Listening {
   }
 }
 
-module.exports.Listening = Listening;
+module.exports.Service = Service;
