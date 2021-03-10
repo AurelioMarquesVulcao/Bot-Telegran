@@ -1,10 +1,9 @@
 const sleep = require('await-sleep');
 const shell = require('shelljs');
+const awaitSleep = require('await-sleep');
 
 const { ImpactaBot } = require('../../lib/server');
 const { Post } = require('../post');
-const awaitSleep = require('await-sleep');
-
 const { Telegram } = require('../post');
 const { Robo } = require('../../lib/Robo');
 
@@ -18,9 +17,9 @@ class Listening {
     this.user = [];
     this.update_id;
     this.mensagemRespondida = [];
-    this.variaveisUpdate().then((x) => console.log('capturei'));
+    this.variaveisUpdate().then((x) => console.log('Capturei as variáveis'));
   }
-  
+
   async getVariaveis() {
     let x = await Robo.request({
       url: 'http://172.16.16.38:3338/variaveisAmbiente',
@@ -72,13 +71,10 @@ class Listening {
   async listen() {
     while (true) {
       let messages = await this.bot.getMessages(this.update_id);
-      console.log(messages);
       let filterMessages = await this.filterMessages(messages);
       let mf = this.filterUser(filterMessages);
       await this.postComands(mf);
-      // console.log(messages);
       let ids = messages.map((x) => x.update_id);
-      console.log(ids);
       await this.atualizaUltimaMensagem(Math.max(...ids));
       console.log(new Date());
       await sleep(this.timeUpdate);
@@ -92,7 +88,7 @@ class Listening {
     try {
       messages.map(async (x) => {
         if (x.update_id > this.update_id) {
-          let text = x.message.text.toLowerCase().trim();
+          let text = (x.message.text.toLowerCase().trim().split('->'))[0];
           let idTrue = await this.findMessage(x.update_id);
           // let user = x.message.from.first_name;
           let user = 'ImpactaBot';
@@ -100,17 +96,16 @@ class Listening {
           let filtro = this.messages.filter(
             (x) => x.text.toLowerCase().trim() == text
           );
+          // console.log("Olhar aqui para var o que vem",this.messages);
+          // console.log("Olhar aqui para var o que vem2", text );
+          // console.log("Olhar aqui para var o que vem3", filtro );
+
           let rotaResponse;
           // Testa se a mensagem já foi respondida
           if (!idTrue) {
             // envia mensagem de ajuda ao usuario
             if (text == 'help' || text == '/help') {
-              console.log(this.messages);
-              console.log(this.messageHelp);
-              await Telegram.post(
-                this.messageHelp,
-                chatId,
-              );
+              await Telegram.post(this.messageHelp, chatId);
               // Salva a mensagem como enviada
               await this.saveMessages(x, `${user}: ${this.messageHelp}`);
             }
@@ -118,6 +113,15 @@ class Listening {
             if (filtro.length != 0) {
               // se a mensagem possuir rota, requesito essa rota
               if (filtro[0].rota) {
+                if (/->/.test(x.message.text.toLowerCase().trim())) {
+                  let t1 = x.message.text.toLowerCase().trim()
+                  // console.log(t1.split('->'));
+                  let comando = t1.split('->')[1];
+                  let dataObj = { [comando.split(':')[0]]: comando.split(':')[1] };
+                  // console.log(dataObj);
+                  filtro[0].data = dataObj;
+                }
+                // console.log(filtro[0]);
                 rotaResponse = await Robo.request({
                   url: filtro[0].rota,
                   method: filtro[0].method,
@@ -166,7 +170,6 @@ class Listening {
   filterUser(messages) {
     let userMessages = [];
     for (let i = 0; i < this.user.length; i++) {
-      // console.log(this.user[i]);
       let validado = messages.filter((x) =>
         new RegExp(this.user[i].id, 'i').test(x.message.from.id)
       );
@@ -182,11 +185,11 @@ class Listening {
    * @param {Object} messages Mensagens do Telegram
    */
   async filterMessages(messages) {
-    // console.log(messages);
     return messages.filter((x) => {
       try {
         return !!x.message.text;
       } catch (e) {
+        console.log(e);
         // Enviar uma mensagem, informando que mensagens editadas não são consideradas
         // return !!x.edited_message.text;
       }
@@ -250,21 +253,12 @@ class Listening {
           url: `http://localhost:3999/mensagensRespondidas?id_gte=${this.update_id}`,
           method: 'GET',
         });
-        // console.log(this.update_id);
-        // console.log(find);
         let ids = find.map((x) => x.id);
         // this.objId.variaveis = [Math.max(...ids)];
-        // console.log(typeof Math.max(...ids));
-        // console.log(typeof -Infinity);
         console.log('Sucesso ao carregar ultima mensagem');
         if (!!find) {
           this.objId.variaveis = [Math.max(...ids)];
 
-          // console.log(Math.max(...ids));
-          // console.log(this.objId);
-          // process.exit();
-          // console.log(this.objId);
-          // console.log(this.objId);
           await Robo.request({
             url: `http://172.16.16.38:3338/variaveisAmbiente/m`,
             method: 'post',
@@ -294,32 +288,21 @@ class Listening {
   async postarTelegram(user, filtro, chatId, rotaResponse = null) {
     // const Post = Telegram.post()
     if (rotaResponse == null) {
-      await Telegram.post(
-        `${user}:\n${filtro.response}`,
-        chatId,
-      );
+      await Telegram.post(`${user}:\n${filtro.response}`, chatId);
     } else if (rotaResponse != null && !!filtro.response) {
       await Telegram.post(
-        `${user}:\n${filtro.response}\n${JSON.stringify(
-          rotaResponse
-        )}`,
-        chatId,
+        `${user}:\n${filtro.response}\n${JSON.stringify(rotaResponse)}`,
+        chatId
       );
     } else {
-      await Telegram.post(
-        `${user}:\n${JSON.stringify(rotaResponse)}`,
-        chatId,
-      );
+      await Telegram.post(`${user}:\n${JSON.stringify(rotaResponse)}`, chatId);
     }
   }
 
   async atualizaUltimaMensagem(numero) {
     try {
-      console.log(numero);
       if (Number.isInteger(numero)) {
-        console.log(this.objId);
         this.objId.variaveis = numero;
-        console.log(this.objId);
         await Robo.request({
           url: `http://172.16.16.38:3338/variaveisAmbiente/m`,
           method: 'post',
@@ -332,7 +315,10 @@ class Listening {
       } else {
         console.log('Sem mensagens novas');
       }
-    } catch (e) { console.log(e); process.exit() }
+    } catch (e) {
+      console.log(e);
+      process.exit();
+    }
   }
 }
 
