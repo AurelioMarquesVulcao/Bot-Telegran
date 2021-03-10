@@ -88,7 +88,7 @@ class Listening {
     try {
       messages.map(async (x) => {
         if (x.update_id > this.update_id) {
-          let text = (x.message.text.toLowerCase().trim().split('->'))[0];
+          let text = x.message.text.toLowerCase().trim().split('->')[0];
           let idTrue = await this.findMessage(x.update_id);
           // let user = x.message.from.first_name;
           let user = 'ImpactaBot';
@@ -114,10 +114,12 @@ class Listening {
               // se a mensagem possuir rota, requesito essa rota
               if (filtro[0].rota) {
                 if (/->/.test(x.message.text.toLowerCase().trim())) {
-                  let t1 = x.message.text.toLowerCase().trim()
+                  let t1 = x.message.text.toLowerCase().trim();
                   // console.log(t1.split('->'));
                   let comando = t1.split('->')[1];
-                  let dataObj = { [comando.split(':')[0]]: comando.split(':')[1] };
+                  let dataObj = {
+                    [comando.split(':')[0]]: comando.split(':')[1],
+                  };
                   // console.log(dataObj);
                   filtro[0].data = dataObj;
                 }
@@ -288,15 +290,37 @@ class Listening {
   async postarTelegram(user, filtro, chatId, rotaResponse = null) {
     // const Post = Telegram.post()
     if (rotaResponse == null) {
+      console.log(typeof filtro.response);
       await Telegram.post(`${user}:\n${filtro.response}`, chatId);
     } else if (rotaResponse != null && !!filtro.response) {
-      await Telegram.post(
-        `${user}:\n${filtro.response}\n${JSON.stringify(rotaResponse)}`,
-        chatId
-      );
+      console.log(typeof rotaResponse);
+      // se a resposta for string não precisa de tratamento.
+      let tipo = typeof rotaResponse;
+      if (tipo == 'string') {
+        await Telegram.post(
+          `${user}:\n${filtro.response}\n${rotaResponse}`,
+          chatId
+        );
+      } else {
+        await Telegram.post(
+          `${user}:\n${filtro.response}\n${JSON.stringify(rotaResponse)}`,
+          chatId
+        );
+      }
     } else {
-      await Telegram.post(`${user}:\n${JSON.stringify(rotaResponse)}`, chatId);
+      console.log(typeof rotaResponse);
+      let tipo = typeof rotaResponse;
+      // se a resposta for string não precisa de tratamento.
+      if (tipo == 'string') {
+        await Telegram.post(`${user}:\n${rotaResponse}`, chatId);
+      } else {
+        await Telegram.post(
+          `${user}:\n${JSON.stringify(rotaResponse)}`,
+          chatId
+        );
+      }
     }
+    process.exit();
   }
 
   async atualizaUltimaMensagem(numero) {
