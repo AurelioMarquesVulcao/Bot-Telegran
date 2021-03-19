@@ -3,3 +3,5 @@ apps:
     name     : 'Server'
   - script   : ./db.js
     name     : 'db_mensagens'
+  - script   : ./reset.js
+    name     : 'reset'
